@@ -62,3 +62,47 @@ function mostrarNome() {
     }
     // resultado.textContent = `Olá, ${inputNome.value}!`
 }
+
+function trocarImagem() {
+    const imagem = document.querySelector("#imagem")
+
+    imagem.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4TQ34wJqg429s8qMSmDliYHVuKbUr0NXPY3EmcFIsSw&s"
+    imagem.alt = "Hora de Aventura"
+}
+
+const link = document.querySelector("#link")
+
+link.href = "https://developer.mozilla.org";
+link.textContent = "Abrir documentação"
+
+function adicionarParagrafo(){
+    const novoParagrafo = document.createElement("p");
+    novoParagrafo.textContent = "Este elemento foi criado pelo JavaScript.";
+
+    const conteudo = document.querySelector("#conteudo")
+
+    conteudo.appendChild(novoParagrafo)
+}
+
+const frutas = [
+    "Maçã",
+    "Banana",
+    "Laranja",
+    "Uva"
+]
+
+const lista = document.querySelector("#lista")
+
+for(let cont = 0; cont < frutas.length; cont++) {
+    const fruta = document.createElement("li");
+
+    fruta.textContent = frutas[cont]
+
+    lista.appendChild(fruta)
+}
+
+function removerAviso(){
+    const aviso = document.querySelector("#aviso")
+
+    aviso.remove()
+}
